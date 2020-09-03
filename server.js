@@ -1,7 +1,7 @@
 const express = require("express");
 const http = require("http");
 const socketIo = require("socket.io");
-const port = process.env.PORT || 8000;
+const PORT = process.env.PORT || 3000;
 const app = express()
 const server = http.createServer(app);
 
@@ -29,4 +29,4 @@ io.on("connection", socket => {
 });
 
 
-server.listen(port, () => console.log('server is running on port 8000'));
+server.listen(PORT, () => console.log('server is running on port 8000'));
